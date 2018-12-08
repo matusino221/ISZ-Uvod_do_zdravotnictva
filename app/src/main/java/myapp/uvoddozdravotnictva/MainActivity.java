@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,17 +25,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText email = findViewById(R.id.emailEditText);
-                if (!isValidEmail(email.getText()))
+                if (!isValidEmail(email.getText())){
+                    Toast.makeText(MainActivity.this, "Musíte vyplniť správne e-mail.", Toast.LENGTH_SHORT).show();
                     return;
+                }
                 RadioButton muz = findViewById(R.id.muzRadioButton);
                 RadioButton zena = findViewById(R.id.zenaRadioButton);
 
-                if (!muz.isChecked() && !zena.isChecked())
+                if (!muz.isChecked() && !zena.isChecked()) {
+                    Toast.makeText(MainActivity.this, "Musíte vyplniť pohlavie.", Toast.LENGTH_SHORT).show();
                     return;
+                }
                 EditText vek = findViewById(R.id.vekEditText);
 
-                if (TextUtils.isEmpty(vek.getText()))
+                if (TextUtils.isEmpty(vek.getText())) {
+                    Toast.makeText(MainActivity.this, "Musíte vyplniť vek.", Toast.LENGTH_SHORT).show();
                     return;
+                }
                 Intent intent = new Intent(MainActivity.this, next.class);
                 intent.putExtra("EMAIL", email.getText().toString());
                 if (muz.isChecked())

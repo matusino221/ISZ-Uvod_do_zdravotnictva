@@ -40,8 +40,10 @@ public class next extends AppCompatActivity {
                 String currentDateandTime = formatcasu.format(new Date());
 
 
-                if (TextUtils.isEmpty(hmotnost.getText()))
+                if (TextUtils.isEmpty(hmotnost.getText())) {
+                    Toast.makeText(next.this, "Musíte vyplniť hmotnosť.", Toast.LENGTH_SHORT).show();
                     return;
+                }
                 String sprava = "Pohlavie: " + pohlavie +"\n"+
                         "Vek: " + vek +"\n";
                 if (!TextUtils.isEmpty(tlak1.getText()))
@@ -71,7 +73,7 @@ public class next extends AppCompatActivity {
                 try {
                     startActivity(Intent.createChooser(i, "Posli mail"));
                 } catch (android.content.ActivityNotFoundException ex) {
-                    Toast.makeText(next.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(next.this, "Nemate ziadny emailovy klient nainstalovny.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
