@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tlak1TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Systolicky tlak: [mmHg]" />
+
+        <EditText
+            android:id="@+id/tlak1EditText"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/tlak2TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diastolicky tlak: [mmHg]" />
+
+        <EditText
+            android:id="@+id/tlak2EditText"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/teplotaTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teplota: [°C]" />
+
+        <EditText
+            android:id="@+id/teplotaEditText"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/tepTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tep: [bpm]" />
+
+        <EditText
+            android:id="@+id/tepEditText"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/hmotnostTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hmotnosť: [kg]" />
+
+        <EditText
+            android:id="@+id/hmotnostEditText"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/liekyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lieky:" />
+
+        <EditText
+            android:id="@+id/liekyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:ems="10"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/popisTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Popis potiazi:" />
+
+        <EditText
+            android:id="@+id/popisEditText"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:ems="10"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/terminTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Termin nastevy lekara:" />
+
+        <EditText
+            android:id="@+id/terminEditText"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:ems="10"
+            android:textSize="25px" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Odoslať" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
